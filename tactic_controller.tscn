@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://cs1tip6megf2e"]
+
+[ext_resource type="Script" uid="uid://cjry540t1nyme" path="res://tactic_controller.gd" id="1_n4hle"]
+
+[node name="TacticController" type="Node3D" unique_id=1914652149]
+script = ExtResource("1_n4hle")
+
+[node name="Elevation" type="Node3D" parent="." unique_id=605550493]
+transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Elevation" unique_id=1252375163]

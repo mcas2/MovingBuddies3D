@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://dpxvqq5actejd"]
 
+[ext_resource type="PackedScene" uid="uid://cs1tip6megf2e" path="res://tactic_controller.tscn" id="1_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://bg0fhj8fewjnr" path="res://models/Skeleton_Mage.glb" id="1_h2yge"]
-[ext_resource type="PackedScene" uid="uid://tijy4ddhb3ll" path="res://models/Skeleton_Minion.glb" id="1_ig7tw"]
 [ext_resource type="AnimationLibrary" uid="uid://corp6wuxvo2jd" path="res://models/Rig_Medium_General.glb" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://cftqelqg6vf40" path="res://personaje.tscn" id="4_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -21,17 +22,13 @@ glow_enabled = true
 vertices = PackedVector3Array(-1.2495117, -1.1920929e-07, -5.524292, 0.5004883, -1.1920929e-07, -5.774292, 0.25048828, -1.1920929e-07, -11.024292, -13.999512, -1.1920929e-07, 4.975708, -8.249512, -1.1920929e-07, 4.975708, -7.7495117, -1.1920929e-07, 3.975708, -6.4995117, -1.1920929e-07, 3.975708, -1.2495117, -1.1920929e-07, 0.725708, -13.999512, -1.1920929e-07, -11.024292, 6.5004883, -1.1920929e-07, -3.524292, 7.0004883, -1.1920929e-07, -0.274292, 8.000488, -1.1920929e-07, -0.274292, 6.5004883, -1.1920929e-07, -5.774292, 14.000488, -1.1920929e-07, -11.024292, 8.500488, -1.1920929e-07, 0.975708, 14.000488, -1.1920929e-07, 0.975708, 2.0004883, -1.1920929e-07, 8.475708, 1.0004883, -1.1920929e-07, 8.975708, 1.0004883, -1.1920929e-07, 10.975708, 7.7504883, -1.1920929e-07, 10.975708, 1.0004883, -1.1920929e-07, -3.524292, 1.0004883, -1.1920929e-07, -1.024292, 2.0004883, -1.1920929e-07, -0.774292, 6.2504883, -1.1920929e-07, 0.22570801, 6.2504883, -1.1920929e-07, 1.475708, 2.0004883, -1.1920929e-07, 0.975708, 1.0004883, -1.1920929e-07, 1.225708, 2.0004883, -1.1920929e-07, 6.975708, 7.7504883, -1.1920929e-07, 1.975708, 1.0004883, -1.1920929e-07, 6.725708, -0.24951172, -1.1920929e-07, 8.475708, -5.9995117, -1.1920929e-07, 5.725708, -6.9995117, -1.1920929e-07, 6.225708, -6.9995117, -1.1920929e-07, 10.975708, -0.9995117, -1.1920929e-07, 1.225708, -5.9995117, -1.1920929e-07, 4.225708, -0.24951172, -1.1920929e-07, 7.225708, 14.000488, -1.1920929e-07, 10.975708, -8.249512, -1.1920929e-07, 5.475708, -13.999512, -1.1920929e-07, 10.975708)
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 0), PackedInt32Array(2, 0, 8), PackedInt32Array(8, 0, 5), PackedInt32Array(8, 5, 3), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(14, 11, 15), PackedInt32Array(15, 11, 12), PackedInt32Array(15, 12, 13), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 9), PackedInt32Array(22, 9, 23), PackedInt32Array(23, 9, 10), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 28), PackedInt32Array(26, 28, 27), PackedInt32Array(27, 28, 19), PackedInt32Array(27, 29, 26), PackedInt32Array(19, 16, 27), PackedInt32Array(24, 25, 23), PackedInt32Array(23, 25, 22), PackedInt32Array(30, 17, 18), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 30), PackedInt32Array(33, 30, 18), PackedInt32Array(29, 36, 26), PackedInt32Array(26, 36, 34), PackedInt32Array(34, 36, 35), PackedInt32Array(35, 36, 31), PackedInt32Array(34, 35, 7), PackedInt32Array(7, 35, 6), PackedInt32Array(31, 36, 30), PackedInt32Array(14, 15, 28), PackedInt32Array(28, 15, 19), PackedInt32Array(19, 15, 37), PackedInt32Array(32, 33, 38), PackedInt32Array(38, 33, 39), PackedInt32Array(38, 39, 3), PackedInt32Array(3, 4, 38)]
 
-[sub_resource type="CylinderShape3D" id="CylinderShape3D_7mycd"]
-radius = 0.5761719
-
-[sub_resource type="CylinderMesh" id="CylinderMesh_272bh"]
-height = 0.001
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
-transparency = 1
-albedo_color = Color(0.88915837, 0.51793283, 0.5609344, 1)
-
 [node name="Main" type="Node3D" unique_id=1523625900]
+
+[node name="Personaje" parent="." unique_id=1929301840 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6188104, 0, 0)
+
+[node name="TacticController" parent="." unique_id=1914652149 instance=ExtResource("1_1bvp3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9724212, 10.864439)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2017805775]
 environment = SubResource("Environment_0xm2m")
@@ -78,30 +75,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4778116, 0)
 vertices = PackedVector3Array(-0.4008175, 0, 0.91374326, 1.5148252, 0, 0.7239046, 1.3595022, 0, -0.6222222, 0.6691812, 0, -0.9673828, 0.3757938, 0, -4.2118945, 6.036432, 0, -4.2809267, 6.070947, 0, -4.95399, -0.50436556, 0, -5.0230227, -0.47499573, 0, -3.3391027, -0.46838868, 0, -2.9603348)
 affect_navigation_mesh = true
 
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1599531944]
-transform = Transform3D(0.7326831, -0.44115165, 0.51822835, 0.0435581, 0.790298, 0.6111725, -0.6791746, -0.42522275, 0.5982537, 8.691706, 7.641697, 8.609296)
-fov = 58.74613
-
 [node name="Skeleton_Mage" parent="." unique_id=1712985995 instance=ExtResource("1_h2yge")]
 transform = Transform3D(0.25881907, 4.222196e-08, 0.9659258, -4.222196e-08, 1, -3.2398045e-08, -0.9659258, -3.2398045e-08, 0.25881907, -2.1940937, -0.45216703, 4.327727)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Mage" unique_id=1041100543]
 libraries/Rig_Medium_General = ExtResource("2_1bvp3")
-
-[node name="Personaje" type="CharacterBody3D" parent="." unique_id=1124864060]
-
-[node name="Skeleton_Minion" parent="Personaje" unique_id=599254808 instance=ExtResource("1_ig7tw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2489016, -0.48525023, 0)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Personaje/Skeleton_Minion" unique_id=357861301]
-libraries/Rig_Medium_General = ExtResource("2_1bvp3")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Personaje" unique_id=836103818]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2417338, 0.5620371, 0.006853342)
-shape = SubResource("CylinderShape3D_7mycd")
-
-[node name="SelectionMarker" type="MeshInstance3D" parent="Personaje" unique_id=1180116236]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.2540553, -0.4792981, -0.0041189194)
-visible = false
-mesh = SubResource("CylinderMesh_272bh")
-surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")

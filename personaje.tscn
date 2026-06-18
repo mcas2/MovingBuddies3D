@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://cftqelqg6vf40"]
+
+[ext_resource type="PackedScene" uid="uid://tijy4ddhb3ll" path="res://models/Skeleton_Minion.glb" id="1_ltgau"]
+[ext_resource type="Script" uid="uid://bbwhcn5wohjre" path="res://personaje.gd" id="1_yppqc"]
+[ext_resource type="AnimationLibrary" uid="uid://corp6wuxvo2jd" path="res://models/Rig_Medium_General.glb" id="2_yppqc"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_7mycd"]
+radius = 0.5761719
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_272bh"]
+height = 0.001
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
+transparency = 1
+albedo_color = Color(0.88915837, 0.51793283, 0.5609344, 1)
+
+[node name="Personaje" type="CharacterBody3D" unique_id=1929301840]
+script = ExtResource("1_yppqc")
+
+[node name="Skeleton_Minion" parent="." unique_id=599254808 instance=ExtResource("1_ltgau")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Minion" unique_id=1377036151]
+libraries/Rig_Medium_General = ExtResource("2_yppqc")
+
+[node name="PlayerClickableArea" type="Area3D" parent="." unique_id=362266701]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="PlayerCollisionClickable" type="CollisionShape3D" parent="PlayerClickableArea" unique_id=1136937384]
+shape = SubResource("CylinderShape3D_7mycd")
+disabled = true
+
+[node name="PlayerCollision" type="CollisionShape3D" parent="." unique_id=579827904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_7mycd")
+
+[node name="SelectionMarker" type="MeshInstance3D" parent="." unique_id=2030736900]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, -0.004)
+visible = false
+mesh = SubResource("CylinderMesh_272bh")
+surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
