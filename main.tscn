@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dpxvqq5actejd"]
 
 [ext_resource type="PackedScene" uid="uid://cs1tip6megf2e" path="res://tactic_controller.tscn" id="1_1bvp3"]
+[ext_resource type="Script" uid="uid://ch6k4i4prf0wr" path="res://main.gd" id="1_7mycd"]
 [ext_resource type="PackedScene" uid="uid://baxstutvc85y0" path="res://enemigo.tscn" id="1_lquwl"]
 [ext_resource type="Script" uid="uid://dw5g2pyevaxac" path="res://enemigo.gd" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cftqelqg6vf40" path="res://personaje.tscn" id="4_1bvp3"]
@@ -23,6 +24,7 @@ vertices = PackedVector3Array(-1.2495117, -1.1920929e-07, -5.524292, 0.5004883, 
 polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Array(6, 5, 7), PackedInt32Array(7, 5, 0), PackedInt32Array(2, 0, 8), PackedInt32Array(8, 0, 5), PackedInt32Array(8, 5, 3), PackedInt32Array(10, 9, 11), PackedInt32Array(11, 9, 12), PackedInt32Array(1, 2, 12), PackedInt32Array(12, 2, 13), PackedInt32Array(14, 11, 15), PackedInt32Array(15, 11, 12), PackedInt32Array(15, 12, 13), PackedInt32Array(17, 16, 18), PackedInt32Array(18, 16, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 9), PackedInt32Array(22, 9, 23), PackedInt32Array(23, 9, 10), PackedInt32Array(25, 24, 26), PackedInt32Array(26, 24, 28), PackedInt32Array(26, 28, 27), PackedInt32Array(27, 28, 19), PackedInt32Array(27, 29, 26), PackedInt32Array(19, 16, 27), PackedInt32Array(24, 25, 23), PackedInt32Array(23, 25, 22), PackedInt32Array(30, 17, 18), PackedInt32Array(32, 31, 33), PackedInt32Array(33, 31, 30), PackedInt32Array(33, 30, 18), PackedInt32Array(29, 36, 26), PackedInt32Array(26, 36, 34), PackedInt32Array(34, 36, 35), PackedInt32Array(35, 36, 31), PackedInt32Array(34, 35, 7), PackedInt32Array(7, 35, 6), PackedInt32Array(31, 36, 30), PackedInt32Array(14, 15, 28), PackedInt32Array(28, 15, 19), PackedInt32Array(19, 15, 37), PackedInt32Array(32, 33, 38), PackedInt32Array(38, 33, 39), PackedInt32Array(38, 39, 3), PackedInt32Array(3, 4, 38)]
 
 [node name="Main" type="Node3D" unique_id=1523625900]
+script = ExtResource("1_7mycd")
 
 [node name="Enemigo" parent="." unique_id=1929301840 instance=ExtResource("1_lquwl")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9251788, 0, 0)

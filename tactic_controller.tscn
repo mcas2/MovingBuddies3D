@@ -9,3 +9,6 @@ script = ExtResource("1_n4hle")
 transform = Transform3D(1, 0, 0, 0, 0.8660254, 0.5, 0, -0.5, 0.8660254, 0, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Elevation" unique_id=1252375163]
+
+[node name="RayCast3D" type="RayCast3D" parent="Elevation/Camera3D" unique_id=2061567779]
+transform = Transform3D(1, 0, 0, 0, -2.9802322e-08, -1, 0, 1, -2.9802322e-08, 0, 0, 0)
