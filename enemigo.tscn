@@ -1,8 +1,8 @@
-[gd_scene format=3 uid="uid://cftqelqg6vf40"]
+[gd_scene format=3 uid="uid://baxstutvc85y0"]
 
-[ext_resource type="Script" uid="uid://bbwhcn5wohjre" path="res://personaje.gd" id="1_yppqc"]
-[ext_resource type="PackedScene" uid="uid://bg0fhj8fewjnr" path="res://models/Skeleton_Mage.glb" id="2_gj0cs"]
-[ext_resource type="AnimationLibrary" uid="uid://corp6wuxvo2jd" path="res://models/Rig_Medium_General.glb" id="2_yppqc"]
+[ext_resource type="Script" uid="uid://bbwhcn5wohjre" path="res://personaje.gd" id="1_moxti"]
+[ext_resource type="PackedScene" uid="uid://tijy4ddhb3ll" path="res://models/Skeleton_Minion.glb" id="2_bnx68"]
+[ext_resource type="AnimationLibrary" uid="uid://corp6wuxvo2jd" path="res://models/Rig_Medium_General.glb" id="3_j8qs0"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_7mycd"]
 radius = 0.5761719
@@ -12,12 +12,15 @@ height = 0.001
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5vw27"]
 transparency = 1
-albedo_color = Color(0.8901961, 0.3137255, 0.27058825, 1)
-emission_enabled = true
-emission = Color(0.77805173, 0.2075356, 0.21406636, 1)
+albedo_color = Color(0.88915837, 0.51793283, 0.5609344, 1)
 
-[node name="Personaje" type="CharacterBody3D" unique_id=1929301840]
-script = ExtResource("1_yppqc")
+[node name="Enemigo" type="CharacterBody3D" unique_id=1929301840]
+script = ExtResource("1_moxti")
+
+[node name="Skeleton_Minion" parent="." unique_id=599254808 instance=ExtResource("2_bnx68")]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Minion" unique_id=1377036151]
+libraries/Rig_Medium_General = ExtResource("3_j8qs0")
 
 [node name="PlayerClickableArea" type="Area3D" parent="." unique_id=362266701]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
@@ -31,11 +34,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_7mycd")
 
 [node name="SelectionMarker" type="MeshInstance3D" parent="." unique_id=2030736900]
-transform = Transform3D(1.4003866, 0, 0, 0, 1.4003866, 0, 0, 0, 1.4003866, 0, 0, -0.004)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05, -0.004)
+visible = false
 mesh = SubResource("CylinderMesh_272bh")
 surface_material_override/0 = SubResource("StandardMaterial3D_5vw27")
-
-[node name="Skeleton_Mage" parent="." unique_id=1453996078 instance=ExtResource("2_gj0cs")]
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Mage" unique_id=1376796617]
-libraries/Rig_Medium_General = ExtResource("2_yppqc")

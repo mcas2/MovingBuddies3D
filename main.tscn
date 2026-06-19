@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dpxvqq5actejd"]
 
 [ext_resource type="PackedScene" uid="uid://cs1tip6megf2e" path="res://tactic_controller.tscn" id="1_1bvp3"]
-[ext_resource type="PackedScene" uid="uid://bg0fhj8fewjnr" path="res://models/Skeleton_Mage.glb" id="1_h2yge"]
-[ext_resource type="AnimationLibrary" uid="uid://corp6wuxvo2jd" path="res://models/Rig_Medium_General.glb" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://baxstutvc85y0" path="res://enemigo.tscn" id="1_lquwl"]
+[ext_resource type="Script" uid="uid://dw5g2pyevaxac" path="res://enemigo.gd" id="2_7mycd"]
 [ext_resource type="PackedScene" uid="uid://cftqelqg6vf40" path="res://personaje.tscn" id="4_1bvp3"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_7dm0k"]
@@ -24,11 +24,15 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(5, 4, 3), PackedInt32Arr
 
 [node name="Main" type="Node3D" unique_id=1523625900]
 
-[node name="Personaje" parent="." unique_id=1929301840 instance=ExtResource("4_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.6188104, 0, 0)
+[node name="Enemigo" parent="." unique_id=1929301840 instance=ExtResource("1_lquwl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.9251788, 0, 0)
+script = ExtResource("2_7mycd")
 
 [node name="TacticController" parent="." unique_id=1914652149 instance=ExtResource("1_1bvp3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.9724212, 10.864439)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.723378, 2.2132173, 6.4814663)
+
+[node name="Personaje" parent="." unique_id=847450095 instance=ExtResource("4_1bvp3")]
+transform = Transform3D(-0.0383529, 0, 0.99926424, 0, 1, 0, -0.99926424, 0, -0.0383529, 0, 0, 2.4824734)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=2017805775]
 environment = SubResource("Environment_0xm2m")
@@ -74,9 +78,3 @@ height = 2.1652832
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4778116, 0)
 vertices = PackedVector3Array(-0.4008175, 0, 0.91374326, 1.5148252, 0, 0.7239046, 1.3595022, 0, -0.6222222, 0.6691812, 0, -0.9673828, 0.3757938, 0, -4.2118945, 6.036432, 0, -4.2809267, 6.070947, 0, -4.95399, -0.50436556, 0, -5.0230227, -0.47499573, 0, -3.3391027, -0.46838868, 0, -2.9603348)
 affect_navigation_mesh = true
-
-[node name="Skeleton_Mage" parent="." unique_id=1712985995 instance=ExtResource("1_h2yge")]
-transform = Transform3D(0.25881907, 4.222196e-08, 0.9659258, -4.222196e-08, 1, -3.2398045e-08, -0.9659258, -3.2398045e-08, 0.25881907, -2.1940937, -0.45216703, 4.327727)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Skeleton_Mage" unique_id=1041100543]
-libraries/Rig_Medium_General = ExtResource("2_1bvp3")
